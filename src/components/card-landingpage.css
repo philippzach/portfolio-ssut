@@ -1,0 +1,27 @@
+#design {
+}
+#design:hover {
+  cursor: pointer;
+}
+#design:hover {
+  cursor: pointer;
+}
+#design:hover .design-cls-1 {
+  fill: #db8e53 !important;
+  cursor: pointer !important;
+}
+#design:hover .design-cls-2 {
+  fill: #db8e53 !important;
+  cursor: pointer !important;
+}
+#design:hover .design-cls-3 {
+  fill: #db8e53 !important;
+  stroke: #db8e53 !important;
+  cursor: pointer !important;
+}
+#design:hover .design-stroke {
+  stroke: #db8e53 !important;
+}
+#design:hover .design-fill {
+  fill: #db8e53 !important;
+}

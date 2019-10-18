@@ -1,52 +1,77 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+
+import Img from "gatsby-image"
+import styled from "@emotion/styled"
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+/* const Heading = styled.h1`
+  position: absolute;
+  z-index: 10;
+  font-family: futura;
+  font-weight: bold;
+  color: #25457f;
+  line-height: 1.25em;
+  max-width: 80%;
+  left: 120px;
+  top: 150px;
+  @media (max-width: 600px) {
+    left: 50px;
+    top: 100px;
+  }
+  @media (min-width: 601px) and (max-width: 850px) {
+    left: 100px;
+  }
+  @media (min-width: 1050px) and (max-width: 1249px) {
+    top: 220px;
+  }
+  @media (min-width: 1250px) and (max-width: 1499px) {
+    top: 250px;
+  }
+  @media (min-width: 1500px) {
+    max-width: 800px;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+` */
+const FooterBg = styled.footer`
+  background-color: #f6f7f9;
+  color: #25457f;
+`
 
+const Layout = ({ children, data }) => {
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Header />
+      {/* <Heading>
+        The leading independent experts in Startup Scouting, Assessment and
+        Valuation
+      </Heading> */}
+      <Img
+        className="headerpic"
+        fluid={data.childImageSharp.fluid}
+        alt="bv4 header image"
+        style={{ zIndex: "-1" }}
+      ></Img>
+
+      <main>{children}</main>
+
+      <FooterBg>
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: 1250,
+            padding: `0px 1.0875rem 1.45rem`,
+            paddingTop: 0,
+          }}
+        >
+          <footer>This is the footer</footer>
+        </div>
+      </FooterBg>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
