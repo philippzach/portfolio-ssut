@@ -48,6 +48,7 @@ const Tech = ({ data }) => (
     <SEO title="Home" description="" />
     <Container>
       <Headline text="Technology Stack" />
+      <Spacer />
       <SectionFlex>
         <ImageContainer>
           <ImagewithBg data={data.rocket} />
@@ -83,7 +84,10 @@ const Tech = ({ data }) => (
       <CardContainer>
         <Card />
       </CardContainer>
-      <Cta headline="Technology is complex and diverse; every use case is unique. In order to achieve outstanding results, we analyze each solution separately and use our many years of experience when developing tailored setups." buttonText="Contact us" />
+      <Cta
+        headline="Technology is complex and diverse; every use case is unique. In order to achieve outstanding results, we analyze each solution separately and use our many years of experience when developing tailored setups."
+        buttonText="Contact us"
+      />
     </Container>
   </Layout>
 )

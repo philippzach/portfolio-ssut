@@ -50,6 +50,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" description="" />
     <Container>
       <Headline text="Swiss Startup Tech" />
+      <Spacer />
       <SectionFlex>
         <ImageContainer>
           <ImagewithBg data={data.rocket} />
@@ -69,10 +70,14 @@ const IndexPage = ({ data }) => (
         </TextContainer>
       </SectionFlex>
       <Spacer />
+      <Spacer />
       <Headline text="Our Focus" />
+      <Spacer />
       <CardContainer>
         <Card />
       </CardContainer>
+      <Spacer />
+      <Spacer />
     </Container>
   </Layout>
 )

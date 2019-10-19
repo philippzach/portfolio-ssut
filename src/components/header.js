@@ -49,8 +49,11 @@ const ListItem = styled.li`
   color: #494949;
   font-family: Raleway;
   font-weight: bold;
-
-  font-size: 16px;
+  font-size: 17px;
+  @media (min-width: 1000px) {
+    font-size: 18px;
+    padding-right: 1.75em;
+  }
 `
 const Mobile = styled.div`
   display: flex;
@@ -177,7 +180,7 @@ class Header extends Component {
               <Link to="/services">
                 <ListItem>Services</ListItem>
               </Link>
-              <Link to="/product">
+              <Link to="/product-domains">
                 <ListItem>Product</ListItem>
               </Link>
               <Link to="/technology-stack">
@@ -205,7 +208,7 @@ class Header extends Component {
                 Services
               </Link>
               <Link
-                to="/product"
+                to="/product-domains"
                 style={{
                   textDecoration: `none`,
                 }}
@@ -213,7 +216,7 @@ class Header extends Component {
                 Product
               </Link>
               <Link
-                to="/technology"
+                to="/technology-stack"
                 style={{
                   textDecoration: `none`,
                 }}

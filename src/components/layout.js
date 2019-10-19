@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import styled from "@emotion/styled"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 /* const Heading = styled.h1`
@@ -37,8 +38,7 @@ import "./layout.css"
   }
 ` */
 const FooterBg = styled.footer`
-  background-color: #f6f7f9;
-  color: #25457f;
+  background-color: #f5f5f5;
 `
 
 const Layout = ({ children, data }) => {
@@ -67,7 +67,7 @@ const Layout = ({ children, data }) => {
             paddingTop: 0,
           }}
         >
-          <footer>This is the footer</footer>
+          <Footer />
         </div>
       </FooterBg>
     </>

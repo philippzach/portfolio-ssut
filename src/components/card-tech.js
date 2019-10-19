@@ -14,7 +14,7 @@ const Grid = styled.section`
 
 const Card = styled.div`
   display: flex;
-  padding: 0.5em 0.5em 0.5em 2em;
+  padding: 1em 1em 1em 2em;
   flex-direction: column;
   border-radius: 10px;
   transition: box-shadow 300ms ease-in-out;
@@ -37,6 +37,7 @@ const Headline = styled.h3`
 const Paragraph = styled.p`
   font-family: raleway;
   font-weight: 400;
+  font-size: 0.8em;
 `
 const Span = styled.span`
   font-family: raleway;
