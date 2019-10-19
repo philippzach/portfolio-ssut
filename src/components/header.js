@@ -1,8 +1,8 @@
 import { Link } from "gatsby"
 import React, { Component } from "react"
-import Logo from "../images/ssutlogo.svg"
+import Logo from "../images/ssut.svg"
 import styled from "@emotion/styled"
-import MobileLogo from "../images/ssutlogo.svg"
+import MobileLogo from "../images/ssut.svg"
 import Button from "./button"
 
 import "./header.css"

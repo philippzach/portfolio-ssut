@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import Logo from "../images/ssutlogo.svg"
+import Logo from "../images/ssut.svg"
 import Button from "../components/button"
 
 const Container = styled.footer``

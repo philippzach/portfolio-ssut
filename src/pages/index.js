@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import styled from "@emotion/styled"
-import Logo from "../images/lp-logo.svg"
+import Logo from "../images/lp-logo-new.svg"
 import ImagewithBg from "../components/imagewithbackground"
 import Container from "../components/container"
 import Headline from "../components/headline"

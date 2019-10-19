@@ -134,6 +134,7 @@ const Services = ({ data }) => (
     <Container>
       <Headline text="About us" />
       <Spacer />
+      <Spacer />
       <SectionFlex>
         <ImageContainer>
           <IconwithBg data={IconTest} />
