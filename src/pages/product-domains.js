@@ -21,13 +21,20 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: .9fr 1fr;
+  @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  }
 `
 const TextContainer = styled.div`
   max-width: 80%;
   margin: auto;
   padding-right: 2.5em;
+  @media(max-width: 650px) {
+    padding-right: 0em;
+  }
   h1 {
     font-family: raleway;
     font-weight: bold;
@@ -46,9 +53,15 @@ const ImageContainer = styled.div`
 
 const Spacer = styled.div`
   padding: 3.5em 0;
+  @media(max-width: 650px) {
+    padding: 1.5em 0;
+  }
 `
 const SpacerBig = styled.div`
   padding: 6em 0;
+  @media(max-width: 650px) {
+    padding: 3em 0;
+  }
 `
 const CardContainer = styled.div`
   display: flex;
@@ -123,7 +136,7 @@ const IconTextContainer = styled.div`
 
 const Services = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="Home" description="" />
+    <SEO title="SWISS STARTUP TECH | Product" description="We offer innovative digital strategies with the following products: web & mobile applications, IoT, different reality, blockchain, AI and machine learning. " />
     <Container>
       <Headline text="Product Domains" />
       <Spacer />

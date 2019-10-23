@@ -15,8 +15,14 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: .55fr 1fr;
+  @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  }
+
+  
 `
 const TextContainer = styled.div`
   max-width: 80%;
@@ -30,6 +36,9 @@ const TextContainer = styled.div`
     font-family: raleway;
     font-weight: 400;
     color: rgb(65, 65, 65);
+  }
+  @media(max-width: 650px) {
+
   }
 `
 
@@ -47,7 +56,7 @@ const CardContainer = styled.div`
 
 const IndexPage = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="Home" description="" />
+    <SEO title="SWISS STARTUP TECH | Digital Innovation Team " description="We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes." />
     <Container>
       <Headline text="Swiss Startup Tech" />
       <Spacer />

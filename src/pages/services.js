@@ -15,13 +15,21 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: ${props =>
+    props.opposite ? '1fr .55fr' : '.6fr 1fr'};
+  @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  }
 `
 const TextContainer = styled.div`
   max-width: 80%;
   margin: auto;
   padding-right: 2.5em;
+  @media(max-width: 650px) {
+    padding-right: 0em;
+  }
   h1 {
     font-family: raleway;
     font-weight: bold;
@@ -41,6 +49,12 @@ const ImageContainer = styled.div`
 const Spacer = styled.div`
   padding: 2em 0;
 `
+const SpacerAdd = styled.div`
+  padding: 2em 0;
+  @media(max-width: 650px) {
+    display: none;
+  }
+`
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -52,10 +66,13 @@ const BackgroundSvg = styled.section`
   height: 910px;
   background-position: center;
   background-size: cover;
+  @media(max-width: 650px) {
+    height: 1425px;
+  }
 `
 const Services = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="Home" description="" />
+    <SEO title="SWISS STARTUP TECH | Services" description="Swiss Startup Tech as a digital innovation team offers digital product development, product refinement and optimisation in digital transformation processes. " />
     <Container>
       <Headline text="Services" />
       <Spacer />
@@ -83,13 +100,13 @@ const Services = ({ data }) => (
           </p>
         </TextContainer>
       </SectionFlex>
-      <Spacer />
+      <SpacerAdd />
     </Container>
-    <Spacer />
+    <SpacerAdd />
     <BackgroundSvg>
       <Container>
-        <SectionFlex>
-          <TextContainer left>
+        <SectionFlex opposite>
+          <TextContainer >
             <h1>Product Refinement</h1>
             <p>
               Sometimes in an early phase of product development, people tend to

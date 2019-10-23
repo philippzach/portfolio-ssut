@@ -6,9 +6,13 @@ import "./card-landingpage.css"
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: repeat(3, 275px);
-  grid-template-rows: 275px;
+  grid-template-columns: 275px;
+  grid-template-rows:  repeat(3, 275px);
   grid-gap: 4em;
+  @media(min-width: 650px) {
+    grid-template-columns: repeat(3, 275px);
+  grid-template-rows: 275px;
+  }
 `
 
 const CardContainer = styled.div`

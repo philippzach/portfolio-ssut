@@ -15,6 +15,9 @@ const SectionFlex = styled.div`
   text-align: center;
   padding-bottom: 2em;
 `
+const Form = styled.div`
+
+`
 
 const Spacer = styled.div`
   padding: 2em 0;
@@ -22,7 +25,7 @@ const Spacer = styled.div`
 
 const Services = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="Home" description="" />
+    <SEO title="SWISS STARTUP TECH | Contact us" description="" />
     <Container>
       <Headline text="Contact " />
       <Spacer />
@@ -33,14 +36,14 @@ const Services = ({ data }) => (
           onSubmit={() => console.log("Submit!")}
           onReady={form => console.log("Form ready!")}
           loading={
-            <SectionFlex>
+            <Form>
               <div class="lds-ellipsis">
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
-            </SectionFlex>
+            </Form>
           }
         />
       </SectionFlex>

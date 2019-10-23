@@ -1,7 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Swiss Startup Tech`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes.`,
     author: `@philipp.zach`,
   },
   plugins: [
@@ -28,6 +32,7 @@ module.exports = {
         icon: `src/images/ssut-logo.png`, // This path is relative to the root of the site.
       },
     },
+
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

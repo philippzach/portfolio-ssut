@@ -7,9 +7,13 @@ import Icon4 from "../images/icon-tech4.svg"
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: repeat(2, 365px);
-  grid-template-rows: repeat(2, 365px);
+  grid-template-columns: repeat(1, 365px);
+  grid-template-rows: repeat(4, 365px);
   grid-gap: 1em;
+  @media(min-width: 650px) {
+    grid-template-columns: repeat(2, 365px);
+  grid-template-rows: repeat(2, 365px);
+  }
 `
 
 const Card = styled.div`

@@ -8,7 +8,6 @@ import ImagewithBgReverse from "../components/imagewithbackground-reverse"
 import IconwithBgReverse from "../components/iconwithbackground-reverse"
 import Container from "../components/container"
 import Headline from "../components/headline"
-import Card from "../components/card-tech"
 import Cta from "../components/cta"
 import Layout from "../components/layout"
 import Slice from "../images/background-slice.svg"
@@ -25,8 +24,13 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: ${props =>
+    props.opposite ? '1fr .55fr' : '.6fr 1fr'};
+  @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  }
 `
 const TextContainer = styled.div`
   max-width: 80%;
@@ -50,9 +54,15 @@ const ImageContainer = styled.div`
 
 const Spacer = styled.div`
   padding: 2em 0;
+  @media(max-width: 650px) {
+    display: none;
+  }
 `
 const SpacerBig = styled.div`
   padding: 6em 0;
+  @media(max-width: 650px) {
+    display: none;
+  }
 `
 const CardContainer = styled.div`
   display: flex;
@@ -130,7 +140,7 @@ const CardsContainer = styled.div`
 `
 const Services = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="Home" description="" />
+    <SEO title="SWISS STARTUP TECH | About us" description="Our team is made of product builders who strive to serve companies that see the world differently and want to make an impact with  innovative digital solutions." />
     <Container>
       <Headline text="About us" />
       <Spacer />
@@ -155,7 +165,7 @@ const Services = ({ data }) => (
         </TextContainer>
       </SectionFlex>
       <SpacerBig />
-      <SectionFlex>
+      <SectionFlex opposite>
         <TextContainer left>
           <h3>Team</h3>
           <p>

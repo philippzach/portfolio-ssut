@@ -189,6 +189,8 @@ class Header extends Component {
               <Link to="/about-us">
                 <ListItem>About</ListItem>
               </Link>
+              <a   target="_blank"
+          rel="noopener noreferrer" href="https://medium.com/swiss-startup-tech"><ListItem>Blog</ListItem></a>
             </List>
           </Menu>
           <Button text="Contact Us" link="/contact-us" />
@@ -231,14 +233,14 @@ class Header extends Component {
               >
                 About Us
               </Link>
-              <Link
-                to="/blog"
+              <a
+                href="https://medium.com/swiss-startup-tech"
                 style={{
                   textDecoration: `none`,
                 }}
               >
                 News & Blog
-              </Link>
+              </a>
             </MobileList>
           </MobileContainer>
         </div>

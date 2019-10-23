@@ -37,8 +37,12 @@ const GridContainer = styled.div`
 const Grid = styled.section`
   display: grid;
   grid-gap: 1.5em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  @media(min-width: 650px) {
+    grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  }
 `
 const Item = styled.div`
   display: flex;
@@ -75,7 +79,9 @@ const ItemLast = styled.div`
   flex-direction: column;
   border-radius: 10px;
   transition: box-shadow 300ms ease-in-out;
+  @media(min-width: 650px) {
   grid-column: 1 / span 2;
+  }
   max-width: 500px;
   margin: 0 auto;
   text-align: center;

@@ -5,9 +5,15 @@ import "./card-landingpage.css"
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: repeat(4, 225px);
+  grid-template-columns: 225px;
+  grid-template-rows: repeat(4, 225px);
+  grid-gap: .5em;
+  @media(min-width: 650px) {
+    grid-template-columns: repeat(4, 225px);
   grid-template-rows: 225px;
   grid-gap: 4em;
+  }
+
 `
 
 const CardContainer = styled.div`

@@ -46,18 +46,20 @@ const Middle = styled.div`
     font-family: raleway;
     font-size: 0.8em;
   }
+  @media (max-width: 650px) {
+    margin: -1.5em 1em 2em 0;
+  }
 `
 
 const Footer = () => (
   <Container>
     <Spacer />
     <Top>
-      <h4>Contact us</h4>
+      <h4>Get in touch with us!</h4>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. It has been the industry's standard dummy text ever since.
+      Be innovative and find the right product for your strategy
       </p>
-      <Button text="Take the step now" link="/contact-us" />
+      <Button text="Contact us" link="/contact-us" />
     </Top>
     <Spacer />
     <Middle>
@@ -65,6 +67,7 @@ const Footer = () => (
       <Link to="/product-domains">Product</Link>
       <Link to="/technology-stack">Technology</Link>
       <Link to="/about-us">About</Link>
+      <a href="https://medium.com/swiss-startup-tech">Blog</a>
     </Middle>
     <Bottom>
       <ImgContainer>

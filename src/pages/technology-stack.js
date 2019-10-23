@@ -13,8 +13,12 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: .42fr 1fr;
+  @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  }
 `
 const TextContainer = styled.div`
   max-width: 80%;
@@ -45,7 +49,7 @@ const CardContainer = styled.div`
 
 const Tech = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="Home" description="" />
+    <SEO title="SWISS STARTUP TECH | Technology" description="We support you with mobile and backend technologies as well as with operations and databases and offer tailored setups. Technology is complex – we support you. " />
     <Container>
       <Headline text="Technology Stack" />
       <Spacer />
