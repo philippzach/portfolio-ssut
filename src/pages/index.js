@@ -16,7 +16,7 @@ const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr ;
-  grid-template-rows: .55fr 1fr;
+  grid-template-rows: .85fr 1fr;
   @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
