@@ -19,6 +19,15 @@ const SectionFlex = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   }
+  @media (max-width: 499px) {
+    grid-template-rows: .55fr 1fr;
+  }
+  @media (min-width: 500px) and (max-width: 550px) {
+    grid-template-rows: .9fr 1fr;
+  }
+  @media (min-width: 551px) and (max-width: 649px) {
+    grid-template-rows: 1fr 1fr;
+  }
 `
 const TextContainer = styled.div`
   max-width: 80%;
