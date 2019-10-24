@@ -7,6 +7,7 @@ import ImagewithBg from "../components/imagewithbackground"
 import Container from "../components/container"
 import Headline from "../components/headline"
 import Card from "../components/card-landingpage"
+import Logos from "../components/logos"
 
 import Layout from "../components/layout"
 
@@ -81,6 +82,7 @@ const IndexPage = ({ data }) => (
   <Layout data={data.landing}>
     <SEO title="SWISS STARTUP TECH | Digital Innovation Team " description="We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes." />
     <Container>
+    <Logos />
       <Headline text="Empowering product innovation" />
       <Spacer />
       <SectionFlex>
