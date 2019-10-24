@@ -23,15 +23,36 @@ const SectionFlex = styled.div`
   grid-gap: 1em;
   grid-template-columns: 1fr ;
   grid-template-rows: 1.2fr 1fr;
+  @media (max-width: 350px) {
+    grid-template-rows: .6fr 1fr;
+  }
+  @media (min-width: 350px) {
+    grid-template-rows: .7fr 1fr;
+  }
+  @media (min-width: 375px) {
+    grid-template-rows: .75fr 1fr;
+  }
+  @media (min-width: 400px)  {
+    grid-template-rows: 1fr 1fr;
+  }
+  @media (min-width: 425px)  {
+    grid-template-rows: 1.1fr 1fr;
+  }
+  @media (min-width: 450px)  {
+    grid-template-rows: 1.2fr 1fr;
+  }
+  @media (min-width: 500px)  {
+    grid-template-rows: 1.5fr 1fr;
+  }
+  @media (min-width: 551px)  {
+    grid-template-rows: 1.6fr 1fr;
+  }
+  @media (min-width: 600px)  {
+    grid-template-rows: 1.6fr 1fr;
+  }
   @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  }
-  @media (max-width: 499px) {
-    grid-template-rows: .9fr 1fr;
-  }
-  @media (min-width: 550px) and (max-width: 649px) {
-    grid-template-rows: 1.5fr 1fr;
   }
 `
 const TextContainer = styled.div`
@@ -58,15 +79,15 @@ const ImageContainer = styled.div`
 `
 
 const Spacer = styled.div`
-  padding: 3.5em 0;
+  padding: 4.5em 0;
   @media(max-width: 650px) {
-    padding: 1.5em 0;
+    padding: 3em 0;
   }
 `
 const SpacerBig = styled.div`
-  padding: 6em 0;
+  padding: 8em 0;
   @media(max-width: 650px) {
-    padding: 3em 0;
+    padding: 4.5em 0;
   }
 `
 const CardContainer = styled.div`
@@ -270,20 +291,22 @@ export const data = graphql`
     landing: file(relativePath: { eq: "products-header.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     pic1: file(relativePath: { eq: "products-1.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

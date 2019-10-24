@@ -10,6 +10,7 @@ import "./header.css"
 const Absolute = styled.div`
   position: absolute;
   width: 100%;
+  height: 100%;
   z-index: 100;
 `
 
@@ -101,6 +102,7 @@ class Header extends Component {
     }
     this.handleMouseDown = this.handleMouseDown.bind(this)
     this.toggleMenu = this.toggleMenu.bind(this)
+    this.closeMenu = this.closeMenu.bind(this)
   }
   handleMouseDown(e) {
     this.toggleMenu()
@@ -110,13 +112,18 @@ class Header extends Component {
   toggleMenu() {
     this.setState({ sidebarOpen: !this.state.sidebarOpen })
   }
+  closeMenu() {
+    if (this.state.sidebarOpen === true) {
+      this.setState({ sidebarOpen: false})
+    }
+  }
   animateSvg() {
     this.setState({ animate: true })
   }
 
   render() {
     return (
-      <Absolute>
+      <Absolute onClick={() => this.closeMenu()}>
         <Mobile>
           <Link to="/" style={{ display: "flex", alignItems: "center" }}>
             <ML
@@ -193,7 +200,7 @@ class Header extends Component {
           rel="noopener noreferrer" href="https://medium.com/swiss-startup-tech"><ListItem>Blog</ListItem></a>
             </List>
           </Menu>
-          <Button text="Contact Us" link="/contact-us" />
+          <Button text="Contact Us" link="/contact-us#form" />
         </FlexContainer>
         <div
           className={"menu" + this.state.sidebarOpen}

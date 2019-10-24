@@ -9,9 +9,16 @@ const Grid = styled.section`
   grid-template-columns: 275px;
   grid-template-rows:  repeat(3, 275px);
   grid-gap: 4em;
-  @media(min-width: 650px) {
+  @media(min-width: 600px) {
+    grid-gap: 1em;
+  }
+  @media(min-width: 800px) {
     grid-template-columns: repeat(3, 275px);
   grid-template-rows: 275px;
+  grid-gap: .5em;
+  }
+  @media(min-width: 1200px) {
+    grid-gap: 4em;
   }
 `
 
@@ -23,9 +30,6 @@ const CardContainer = styled.div`
   flex-direction: column;
   border-radius: 10px;
   transition: box-shadow 300ms ease-in-out;
-  &:hover {
-    box-shadow: rgba(0, 0, 0, 0.18) 5px 6px 12px 0;
-  }
   #svg {
     padding: 0.5em;
   }
@@ -49,7 +53,7 @@ const Headline = styled.h3`
 
 const Card = props => (
   <Grid>
-    <Link to="/services">
+    <a className="cardlp" href="services#productdevelopment">
       <CardContainer id="design">
         <svg
           id="svg"
@@ -135,8 +139,8 @@ const Card = props => (
           </svg>
         </span>
       </CardContainer>
-    </Link>
-    <Link to="/services">
+    </a>
+    <a className="cardlp" href="services#product-refinement">
       <CardContainer id="design">
         <svg
           id="svg"
@@ -468,8 +472,8 @@ const Card = props => (
           </svg>
         </span>
       </CardContainer>
-    </Link>
-    <Link to="/services">
+    </a>
+    <a className="cardlp" href="/services#digital-transformation">
       <CardContainer id="design">
         <svg
           id="svg"
@@ -563,7 +567,7 @@ const Card = props => (
           </svg>
         </span>
       </CardContainer>
-    </Link>
+    </a>
   </Grid>
 )
 

@@ -2,8 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 
-import ImagewithBg from "../components/imagewithbackground"
-import ImagewithBgReverse from "../components/imagewithbackground-reverse"
+import ImagewithBg from "../components/imagewithbackground-service"
+import ImagewithBgReverse from "../components/imagewithbackground-reverse-service"
 import Container from "../components/container"
 import Headline from "../components/headline"
 import Card from "../components/card-tech"
@@ -13,6 +13,38 @@ import Slice from "../images/background-slice.svg"
 
 import SEO from "../components/seo"
 const SectionFlex = styled.div`
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: ${props =>
+    props.opposite ? '1fr .85fr' : '.85fr 1fr'};
+  @media (max-width: 350px) {
+    grid-template-rows: .45fr 1fr;
+  }
+  @media (max-width: 375px) {
+    grid-template-rows: .6fr 1fr;
+  }
+  @media (min-width: 400px)  {
+    grid-template-rows: .7fr 1fr;
+  }
+  @media (min-width: 450px)  {
+    grid-template-rows: .8fr 1fr;
+  }
+  @media (min-width: 500px)  {
+    grid-template-rows: .85fr 1fr;
+  }
+  @media (min-width: 551px)  {
+    grid-template-rows: 1.2fr 1fr;
+  }
+  @media (min-width: 600px)  {
+    grid-template-rows: 1.2fr 1fr;
+  }
+  @media(min-width: 650px) {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  }
+`
+const SectionFlexOpposite = styled.div`
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr ;
@@ -33,6 +65,12 @@ const SectionFlex = styled.div`
   @media (min-width: 551px) and (max-width: 649px) {
     grid-template-rows: ${props =>
     props.opposite ? '1fr .55fr' : '1.2fr 1fr'};
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 8em;
+  }
+  @media (max-width: 599px) {
+    margin-bottom: 8em;
   }
 `
 const TextContainer = styled.div`
@@ -55,11 +93,21 @@ const TextContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
+@media (max-width: 599px) { padding: 0 10%; }
   padding-right: 20%;
 `
 
 const Spacer = styled.div`
   padding: 2em 0;
+`
+const Spacer15 = styled.div`
+@media (min-width: 600px) { padding: 2em 0; }
+}
+  @media (min-width: 900px) { padding: 2em 0; }
+}
+@media (min-width: 1200px) { padding: 3.45em 0; }
+
+  
 `
 const SpacerAdd = styled.div`
   padding: 2em 0;
@@ -78,9 +126,12 @@ const BackgroundSvg = styled.section`
   height: 910px;
   background-position: center;
   background-size: cover;
-  @media(max-width: 650px) {
+  @media(max-width: 599px) {
     height: 1425px;
   }
+  @media (min-width: 600px) and (max-width: 900px) { 
+    height: 1210px;
+   }
 `
 const Services = ({ data }) => (
   <Layout data={data.landing}>
@@ -88,6 +139,7 @@ const Services = ({ data }) => (
     <Container>
       <Headline text="Services" />
       <Spacer />
+      <a id="productdevelopment">
       <SectionFlex>
         <ImageContainer>
           <ImagewithBg data={data.pic1} />
@@ -112,12 +164,14 @@ const Services = ({ data }) => (
           </p>
         </TextContainer>
       </SectionFlex>
-      <SpacerAdd />
+      </a>
+      <Spacer15 />
     </Container>
-    <SpacerAdd />
+ 
     <BackgroundSvg>
       <Container>
-        <SectionFlex opposite>
+      
+        <SectionFlexOpposite opposite  id="product-refinement">
           <TextContainer >
             <h1>Product Refinement</h1>
             <p>
@@ -138,14 +192,15 @@ const Services = ({ data }) => (
           <ImageContainer>
             <ImagewithBgReverse data={data.pic3} />
           </ImageContainer>
-        </SectionFlex>
-        <Spacer />
+        </SectionFlexOpposite>
+        
+       
       </Container>
     </BackgroundSvg>
 
     <Container>
-      <Spacer />
-      <SectionFlex>
+    <Spacer15 />
+      <SectionFlex id="digital-transformation">
         <ImageContainer>
           <ImagewithBg data={data.pic2} />
         </ImageContainer>
@@ -170,8 +225,7 @@ const Services = ({ data }) => (
           </p>
         </TextContainer>
       </SectionFlex>
-      <Spacer />
-      <Spacer />
+      <Spacer15 />
     </Container>
   </Layout>
 )
@@ -183,40 +237,44 @@ export const data = graphql`
     landing: file(relativePath: { eq: "services-header.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     pic1: file(relativePath: { eq: "services-1.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     pic3: file(relativePath: { eq: "services2.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     pic2: file(relativePath: { eq: "services3.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 
-import ImagewithBg from "../components/imagewithbackground"
+import ImagewithBg from "../components/imagewithbackground-about"
 import IconwithBg from "../components/iconwithbackground"
 import ImagewithBgReverse from "../components/imagewithbackground-reverse"
 import IconwithBgReverse from "../components/iconwithbackground-reverse"
@@ -27,14 +27,123 @@ const SectionFlex = styled.div`
   grid-template-columns: 1fr ;
   grid-template-rows: ${props =>
     props.opposite ? '1fr .55fr' : '.6fr 1fr'};
+    @media (max-width: 350px) {
+    grid-template-rows: .80fr 1fr;
+  }
+  @media (min-width: 351px) {
+    grid-template-rows: .90fr 1fr;
+  }
+  @media (min-width: 375px) {
+    grid-template-rows: 1fr 1fr;
+  }
+  @media (min-width: 400px) {
+    grid-template-rows: 1.1fr 1fr;
+  }
+  @media (min-width: 425px) {
+    grid-template-rows: 1.2fr 1fr;
+  }
+  @media (min-width: 450px) {
+    grid-template-rows: 1.3fr 1fr;
+  }
+  @media (min-width: 500px) {
+    grid-template-rows: 1.4fr 1fr;
+  }
+  @media (min-width: 550px) {
+    grid-template-rows: 1.5fr 1fr;
+  } 
+  @media (min-width: 580px) {
+    grid-template-rows: 1.5fr 1fr;
+  }
   @media(min-width: 650px) {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   }
 `
+const SectionFlexPicture = styled.div`
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: ${props =>
+    props.opposite ? '1fr .55fr' : '.6fr 1fr'};
+    @media (max-width: 350px) {
+    grid-template-rows: 1.5fr 1fr;
+  }
+  @media (min-width: 351px) {
+    grid-template-rows: 1.6fr 1fr;
+  }
+  @media (min-width: 375px) {
+    grid-template-rows: 1.7fr 1fr;
+  }
+  @media (min-width: 400px) {
+    grid-template-rows: 1.9fr 1fr;
+  }
+  @media (min-width: 425px) {
+    grid-template-rows: 2fr 1fr;
+  }
+  @media (min-width: 450px) {
+    grid-template-rows: 2.1fr 1fr;
+  }
+  @media (min-width: 500px) {
+    grid-template-rows: 2.1fr 1fr;
+  }
+  @media (min-width: 550px) {
+    grid-template-rows: 2.2fr 1fr;
+  } 
+  @media (min-width: 580px) {
+    grid-template-rows: 2.3fr 1fr;
+  }
+  @media(min-width: 650px) {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  }
+`
+const SectionFlexOpposite = styled.div`
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr ;
+  grid-template-rows: .6fr 1fr;
+  @media (max-width: 350px) {
+    grid-template-rows: .80fr 1fr;
+  }
+  @media (min-width: 351px) {
+    grid-template-rows: .80fr 1fr;
+  }
+  @media (min-width: 400px) {
+    grid-template-rows: .9fr 1fr;
+  }
+  @media (min-width: 425px) {
+    grid-template-rows: 1fr 1fr;
+  }
+  @media (min-width: 450px) {
+    grid-template-rows: 1.1fr 1fr;
+  }
+  @media (min-width: 500px) {
+    grid-template-rows: 1.2fr 1fr;
+  }
+  @media (min-width: 550px) {
+    grid-template-rows: 1.3fr 1fr;
+  } 
+  @media (min-width: 580px) {
+    grid-template-rows: 1.4fr 1fr;
+  }
+ 
+    @media(max-width: 650px) {
+      .text {
+        grid-row: 2;
+      }
+      .picture {
+        grid-row: 1;
+      }
+      }
+  @media(min-width: 651px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+`
 const TextContainer = styled.div`
   max-width: 80%;
-  margin: auto;
+  margin: ${props => (props.left ? "" : "auto")};
   padding-right: 2.5em;
   h1 {
     font-family: raleway;
@@ -46,22 +155,43 @@ const TextContainer = styled.div`
     font-weight: 400;
     color: rgb(65, 65, 65);
   }
+  @media(max-width: 650px) { 
+    max-width: 100%;
+    padding: 0 5%;
+  }
 `
 
 const ImageContainer = styled.div`
   padding-right: 20%;
+  @media(max-width: 650px) { 
+    padding: 0 5%;
+  }
 `
+
+
 
 const Spacer = styled.div`
   padding: 2em 0;
   @media(max-width: 650px) {
-    display: none;
+    padding: 2em 0;
   }
 `
 const SpacerBig = styled.div`
   padding: 6em 0;
   @media(max-width: 650px) {
-    display: none;
+    padding: 3em 0;
+  }
+`
+const Spacer1 = styled.div`
+  padding: 8em 0;
+  @media(max-width: 650px) {
+    padding: 4em 0;
+  }
+`
+const Spacer2 = styled.div`
+  padding: 4em 0;
+  @media(max-width: 650px) {
+    padding: 2em 0;
   }
 `
 const CardContainer = styled.div`
@@ -143,8 +273,7 @@ const Services = ({ data }) => (
     <SEO title="SWISS STARTUP TECH | About us" description="Our team is made of product builders who strive to serve companies that see the world differently and want to make an impact with  innovative digital solutions." />
     <Container>
       <Headline text="About us" />
-      <Spacer />
-      <Spacer />
+      <Spacer2 />
       <SectionFlex>
         <ImageContainer>
           <IconwithBg data={IconTest} />
@@ -165,8 +294,8 @@ const Services = ({ data }) => (
         </TextContainer>
       </SectionFlex>
       <SpacerBig />
-      <SectionFlex opposite>
-        <TextContainer left>
+      <SectionFlexOpposite>
+        <TextContainer left className="text">
           <h3>Team</h3>
           <p>
             Our team is entirely made up of product builders who strive to serve
@@ -183,10 +312,10 @@ const Services = ({ data }) => (
             business.
           </p>
         </TextContainer>
-        <ImageContainer>
+        <ImageContainer className="picture">
           <IconwithBgReverse data={Icon2} />
         </ImageContainer>
-      </SectionFlex>{" "}
+      </SectionFlexOpposite>{" "}
       <SpacerBig />
       <SectionFlex>
         <ImageContainer>
@@ -205,10 +334,10 @@ const Services = ({ data }) => (
       <CardsContainer>
         <Cards />
       </CardsContainer>
-      <Spacer />
+      <Spacer2 />
       <Headline text="Hiring Process" />
       <Spacer />
-      <SectionFlex>
+      <SectionFlexPicture>
         <ImageContainer>
           <ImagewithBg data={data.pic1} />
         </ImageContainer>
@@ -223,8 +352,8 @@ const Services = ({ data }) => (
             every promise we give or commitment we take.
           </p>
         </TextContainer>
-      </SectionFlex>
-      <SpacerBig />
+      </SectionFlexPicture>
+      <Spacer1 />
       <Hiring />
     </Container>
   </Layout>
@@ -237,20 +366,22 @@ export const data = graphql`
     landing: file(relativePath: { eq: "about-header.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
     pic1: file(relativePath: { eq: "about-1.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

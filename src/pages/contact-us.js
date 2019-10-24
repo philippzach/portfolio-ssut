@@ -29,7 +29,7 @@ const Services = ({ data }) => (
     <Container>
       <Headline text="Contact " />
       <Spacer />
-      <SectionFlex>
+      <SectionFlex id="form">
         <HubspotForm
           portalId="6396166"
           formId="34adc3c2-124a-412a-adb4-aa0c94ecbcf8"
@@ -58,10 +58,11 @@ export const data = graphql`
     landing: file(relativePath: { eq: "services-header.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1900
+          maxWidth: 2500
+          quality: 100
           traceSVG: { background: "#ffff", color: "#d78749" }
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

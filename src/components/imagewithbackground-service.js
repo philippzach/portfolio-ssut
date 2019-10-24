@@ -3,12 +3,10 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 
-import BackgroundSvg from "../images/background-icon.svg"
+import BackgroundSvg from "../images/background.svg"
 
 const ImageContainer = styled.div`
   position: relative;
-  display: flex;
-    justify-content: flex-end;
 `
 
 const Image = styled.div`
@@ -17,25 +15,25 @@ const Image = styled.div`
   ::after {
     content: "";
     position: absolute;
-    top: 50px;
-    left: 0px;
-    height: 102%;
-    width: 85%;
+    top: 25%;
+    left: 25%;
+    height: 100%;
+    width: 100%;
     z-index: -2;
-    background: url(${BackgroundSvg}) bottom left;
+    background: url(${BackgroundSvg}) bottom right;
     background-size: cover;
+    @media (max-width: 599px) {
+        left: 17%; 
+    }
   }
- 
-
- 
 `
 
 const ImagewithBg = props => (
   <ImageContainer>
     <Image>
-      <img
-       
-        src={props.data}
+      <Img
+        style={{ maxHeight: "580px" }}
+        fluid={props.data.childImageSharp.fluid}
       />
     </Image>
   </ImageContainer>

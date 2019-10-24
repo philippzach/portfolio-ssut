@@ -25,3 +25,15 @@
 #design:hover .design-fill {
   fill: #db8e53 !important;
 }
+.cardlp {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: box-shadow 300ms ease-in-out;
+}
+
+  .cardlp:hover {
+    box-shadow: rgba(0, 0, 0, 0.18) 5px 6px 12px 0;
+  }

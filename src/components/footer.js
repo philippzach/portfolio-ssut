@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import Logo from "../images/ssut.svg"
-import Button from "../components/button"
+import Button from "../components/buttonhref"
 
 const Container = styled.footer``
 
@@ -18,6 +18,9 @@ const LogoImg = styled.img`
 const Span = styled.span`
   font-family: raleway;
   font-weight: 400;
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
 `
 const Top = styled.div`
   text-align: center;
@@ -37,7 +40,7 @@ const Spacer = styled.div`
 `
 const Middle = styled.div`
   max-width: 500px;
-  margin: 0 auto;
+  margin: 3.5em auto;
   display: flex;
   justify-content: space-between;
   a {
@@ -47,7 +50,7 @@ const Middle = styled.div`
     font-size: 0.8em;
   }
   @media (max-width: 650px) {
-    margin: -1.5em 1em 2em 0;
+    margin: 3.5em auto;
   }
 `
 
@@ -61,7 +64,6 @@ const Footer = () => (
       </p>
       <Button text="Contact us" link="/contact-us" />
     </Top>
-    <Spacer />
     <Middle>
       <Link to="/services">Services</Link>
       <Link to="/product-domains">Product</Link>
@@ -74,7 +76,7 @@ const Footer = () => (
         <LogoImg src={Logo} />
       </ImgContainer>
       <Span>
-        © {new Date().getFullYear()},{` `} Swiss Startup Tech
+        © {new Date().getFullYear()},{` `} Swiss Startup Tech AG
       </Span>
     </Bottom>
   </Container>

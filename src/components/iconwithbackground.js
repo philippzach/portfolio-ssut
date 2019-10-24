@@ -8,7 +8,7 @@ import BackgroundSvg from "../images/background-icon.svg"
 const ImageContainer = styled.div`
   position: relative;
   display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 `
 
 const Image = styled.div`
@@ -18,8 +18,8 @@ const Image = styled.div`
     content: "";
     position: absolute;
     top: 50px;
-    left: 25%;
-    height: 100%;
+    left: 14.75%;
+    height: 101%;
     width: 85%;
     z-index: -2;
     background: url(${BackgroundSvg}) bottom right;

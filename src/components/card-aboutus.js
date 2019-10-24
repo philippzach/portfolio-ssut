@@ -8,12 +8,23 @@ const Grid = styled.section`
   grid-template-columns: 225px;
   grid-template-rows: repeat(4, 225px);
   grid-gap: .5em;
-  @media(min-width: 650px) {
-    grid-template-columns: repeat(4, 225px);
-  grid-template-rows: 225px;
+  @media (min-width: 650px) and (max-width: 1075px) {
+    grid-template-columns: repeat(2, 225px);
+  grid-template-rows: repeat(2, 225px);
   grid-gap: 4em;
   }
 
+  @media(min-width: 850px) and (max-width: 1199px) { 
+    grid-gap: 3em;
+
+  }
+  @media(min-width: 1076px) {
+    grid-template-columns: repeat(4, 225px);
+    grid-template-rows: repeat(1, 225px);
+  }
+  @media(min-width: 1200px) {
+  grid-gap: 5.5em;
+  }
 `
 
 const CardContainer = styled.div`
@@ -23,20 +34,28 @@ const CardContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
+  cursor: default!important;
   transition: box-shadow 300ms ease-in-out;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.18) 5px 6px 12px 0;
   }
-
-  span {
-    font-family: raleway;
-    font-weight: bold;
-    font-size: 0.8em;
-    color: #9f9f9f;
-    svg {
-      margin-left: 5px;
+ svg {
+   g {
+    g {
+      path {
+  cursor: default!important;
+      }
+      g {
+        g {
+          path {
+            cursor: default!important;
+          }
+        }
+      }
     }
-  }
+   }
+ }
+ 
 `
 const Headline = styled.h3`
   font-family: raleway;
@@ -49,7 +68,7 @@ const Headline = styled.h3`
 const Card = props => (
   <Grid>
     <CardContainer id="design">
-    <svg width="94px" height="94px" viewBox="0 0 94 94" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+    <svg width="94px" height="94px" viewBox="0 0 94 94" version="1.1"  >
     
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g className="design-cls-1" id="About-us" transform="translate(-323.000000, -2675.000000)" fill="#797979">

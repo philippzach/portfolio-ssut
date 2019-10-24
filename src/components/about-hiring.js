@@ -48,7 +48,7 @@ const Item = styled.div`
   display: flex;
   padding: 1.5em 1em;
   align-items: center;
-
+cursor: default!important;
   flex-direction: column;
   border-radius: 10px;
   transition: box-shadow 300ms ease-in-out;
@@ -75,6 +75,7 @@ const ItemLast = styled.div`
   display: flex;
   padding: 1em;
   align-items: center;
+  cursor: default!important;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
@@ -104,7 +105,7 @@ const ItemLast = styled.div`
 `
 const Buttons = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const Hiring = () => (
@@ -341,7 +342,7 @@ const Hiring = () => (
       </Grid>
       <Spacer />
       <Buttons>
-        <Button text="Contact us" link="contact-us" />
+  
         <ButtonHref href="https://swissstartupjobs.com" text="Job Openings" />
       </Buttons>
       <Spacer />
