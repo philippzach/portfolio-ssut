@@ -21,46 +21,47 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-rows: 1.2fr 1fr;
   @media (max-width: 350px) {
-    grid-template-rows: .6fr 1fr;
+    grid-template-rows: 1fr 0.6fr;
   }
   @media (min-width: 350px) {
-    grid-template-rows: .7fr 1fr;
+    grid-template-rows: 1fr 0.7fr;
   }
   @media (min-width: 375px) {
-    grid-template-rows: .75fr 1fr;
+    grid-template-rows: 1fr 0.75fr;
   }
-  @media (min-width: 400px)  {
+  @media (min-width: 400px) {
     grid-template-rows: 1fr 1fr;
   }
-  @media (min-width: 425px)  {
-    grid-template-rows: 1.1fr 1fr;
+  @media (min-width: 425px) {
+    grid-template-rows: 1fr 1.1fr;
   }
-  @media (min-width: 450px)  {
-    grid-template-rows: 1.2fr 1fr;
+  @media (min-width: 450px) {
+    grid-template-rows: 1fr 1.2fr;
   }
-  @media (min-width: 500px)  {
-    grid-template-rows: 1.5fr 1fr;
+  @media (min-width: 500px) {
+    grid-template-rows: 1fr 1.5fr;
   }
-  @media (min-width: 551px)  {
-    grid-template-rows: 1.6fr 1fr;
+  @media (min-width: 551px) {
+    grid-template-rows: 1fr 1.6fr;
   }
-  @media (min-width: 600px)  {
-    grid-template-rows: 1.6fr 1fr;
+  @media (min-width: 600px) {
+    grid-template-rows: 1fr 1.6fr;
   }
-  @media(min-width: 650px) {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  @media (min-width: 650px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 `
 const TextContainer = styled.div`
   max-width: 80%;
   margin: auto;
   padding-right: 2.5em;
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     padding-right: 0em;
+    max-width: 100%;
   }
   h1 {
     font-family: raleway;
@@ -76,17 +77,17 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   padding-right: 20%;
+  @media (max-width: 650px) {
+    grid-row: 2;
+  }
 `
 
 const Spacer = styled.div`
-  padding: 4.5em 0;
-  @media(max-width: 650px) {
-    padding: 3em 0;
-  }
+  padding: 2em 0;
 `
 const SpacerBig = styled.div`
   padding: 8em 0;
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     padding: 4.5em 0;
   }
 `
@@ -163,7 +164,10 @@ const IconTextContainer = styled.div`
 
 const Services = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="SWISS STARTUP TECH | Product" description="We offer innovative digital strategies with the following products: web & mobile applications, IoT, different reality, blockchain, AI and machine learning. " />
+    <SEO
+      title="SWISS STARTUP TECH | Product"
+      description="We offer innovative digital strategies with the following products: web & mobile applications, IoT, different reality, blockchain, AI and machine learning. "
+    />
     <Container>
       <Headline text="Product Domains" />
       <Spacer />

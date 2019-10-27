@@ -24,122 +24,118 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr ;
-  grid-template-rows: ${props =>
-    props.opposite ? '1fr .55fr' : '.6fr 1fr'};
-    @media (max-width: 350px) {
-    grid-template-rows: .80fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: ${props => (props.opposite ? "1fr .55fr" : ".6fr 1fr")};
+  @media (max-width: 350px) {
+    grid-template-rows: auto;
   }
   @media (min-width: 351px) {
-    grid-template-rows: .90fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 375px) {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 400px) {
-    grid-template-rows: 1.1fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 425px) {
-    grid-template-rows: 1.2fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 450px) {
-    grid-template-rows: 1.3fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 500px) {
-    grid-template-rows: 1.4fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 550px) {
-    grid-template-rows: 1.5fr 1fr;
-  } 
-  @media (min-width: 580px) {
-    grid-template-rows: 1.5fr 1fr;
+    grid-template-rows: auto;
   }
-  @media(min-width: 650px) {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  @media (min-width: 580px) {
+    grid-template-rows: auto;
+  }
+  @media (min-width: 650px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 `
 const SectionFlexPicture = styled.div`
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr ;
-  grid-template-rows: ${props =>
-    props.opposite ? '1fr .55fr' : '.6fr 1fr'};
-    @media (max-width: 350px) {
-    grid-template-rows: 1.5fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: ${props => (props.opposite ? "1fr .55fr" : ".6fr 1fr")};
+  @media (max-width: 350px) {
+    grid-template-rows: auto;
   }
   @media (min-width: 351px) {
-    grid-template-rows: 1.6fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 375px) {
-    grid-template-rows: 1.7fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 400px) {
-    grid-template-rows: 1.9fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 425px) {
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 450px) {
-    grid-template-rows: 2.1fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 500px) {
-    grid-template-rows: 2.1fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 550px) {
-    grid-template-rows: 2.2fr 1fr;
-  } 
-  @media (min-width: 580px) {
-    grid-template-rows: 2.3fr 1fr;
+    grid-template-rows: auto;
   }
-  @media(min-width: 650px) {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  @media (min-width: 580px) {
+    grid-template-rows: auto;
+  }
+  @media (min-width: 650px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 `
 const SectionFlexOpposite = styled.div`
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr ;
-  grid-template-rows: .6fr 1fr;
+  grid-template-columns: 1fr;
   @media (max-width: 350px) {
-    grid-template-rows: .80fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 351px) {
-    grid-template-rows: .80fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 400px) {
-    grid-template-rows: .9fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 425px) {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 450px) {
-    grid-template-rows: 1.1fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 500px) {
-    grid-template-rows: 1.2fr 1fr;
+    grid-template-rows: auto;
   }
   @media (min-width: 550px) {
-    grid-template-rows: 1.3fr 1fr;
-  } 
-  @media (min-width: 580px) {
-    grid-template-rows: 1.4fr 1fr;
+    grid-template-rows: auto;
   }
- 
-    @media(max-width: 650px) {
-      .text {
-        grid-row: 2;
-      }
-      .picture {
-        grid-row: 1;
-      }
-      }
-  @media(min-width: 651px) {
+  @media (min-width: 580px) {
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 650px) {
+    .text {
+      grid-row: 1;
+    }
+    .picture {
+      grid-row: 2;
+    }
+  }
+  @media (min-width: 651px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-  
 `
 const TextContainer = styled.div`
   max-width: 80%;
@@ -155,122 +151,106 @@ const TextContainer = styled.div`
     font-weight: 400;
     color: rgb(65, 65, 65);
   }
-  @media(max-width: 650px) { 
+  @media (max-width: 650px) {
     max-width: 100%;
-    padding: 0 5%;
+    padding: 0;
+  }
+  @media (min-width: 650px) and (max-width: 1025px) {
+    max-width: 100%;
+    padding-right: 1em;
+  }
+`
+
+const TextContainerOpposite = styled.div`
+  max-width: 80%;
+  padding-right: 2.5em;
+  h1 {
+    font-family: raleway;
+    font-weight: bold;
+    color: rgb(106, 106, 106);
+  }
+  p {
+    font-family: raleway;
+    font-weight: 400;
+    color: rgb(65, 65, 65);
+  }
+  @media (max-width: 650px) {
+    max-width: 100%;
+    padding: 0;
+  }
+  @media (min-width: 650px) and (max-width: 1025px) {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 1em;
   }
 `
 
 const ImageContainer = styled.div`
   padding-right: 20%;
-  @media(max-width: 650px) { 
-    padding: 0 5%;
+  @media (max-width: 650px) {
+    padding: 0;
+    grid-row: 2;
+  }
+  @media (min-width: 650px) and (max-width: 1025px) {
+    padding-right: 0;
+  }
+`
+const ImageContainerHiring = styled.div`
+  padding-right: 20%;
+  @media (max-width: 650px) {
+    padding: 0;
+    grid-row: 2;
+  }
+  @media (min-width: 650px) and (max-width: 1025px) {
+    padding-right: 20%;
   }
 `
 
-
+const ImageContainerReverse = styled.div`
+  padding-right: 20%;
+  @media (max-width: 650px) {
+    padding: 0;
+  }
+  @media (min-width: 650px) and (max-width: 1025px) {
+    padding-right: 0;
+  }
+`
 
 const Spacer = styled.div`
   padding: 2em 0;
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     padding: 2em 0;
   }
 `
 const SpacerBig = styled.div`
   padding: 6em 0;
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     padding: 3em 0;
   }
 `
 const Spacer1 = styled.div`
   padding: 8em 0;
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     padding: 4em 0;
   }
 `
 const Spacer2 = styled.div`
-  padding: 4em 0;
-  @media(max-width: 650px) {
+  padding: 2em 0;
+  @media (max-width: 650px) {
     padding: 2em 0;
   }
 `
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-const BackgroundSvg = styled.section`
-  display: flex;
-  align-items: center;
-  background-image: url(${Slice});
-  height: 910px;
-  background-position: center;
-  background-size: cover;
-`
-const IconsLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 750px) {
-    flex-direction: row;
-    justify-content: center;
-  }
-`
-const IconsRight = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  @media (min-width: 750px) {
-    flex-direction: row;
-    justify-content: center;
-  }
-`
-const IconContainer = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.14) 0 4px 6px 0;
-  background-color: #db8e53;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  @media (min-width: 750px) {
-    width: 350px;
-    height: 350px;
-  }
-  img {
-    padding: 2em 1em;
-    margin-bottom: 0;
-  }
-`
-const IconTextContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 1.45em;
-  @media (min-width: 750px) {
-    align-items: ${props => (props.right ? "flex-end" : "flex-start")};
-    width: 50%;
-    padding-top: 0em;
-  }
-  div {
-    max-width: 350px;
-  }
-  h3 {
-    color: #535353;
-    font-family: raleway;
-    font-weight: bold;
-    line-height: 1.2em;
-  }
-  p {
-    color: #535353;
-    font-family: raleway;
-  }
-`
+
 const CardsContainer = styled.div`
   display: flex;
   justify-content: center;
 `
 const Services = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="SWISS STARTUP TECH | About us" description="Our team is made of product builders who strive to serve companies that see the world differently and want to make an impact with  innovative digital solutions." />
+    <SEO
+      title="SWISS STARTUP TECH | About us"
+      description="Our team is made of product builders who strive to serve companies that see the world differently and want to make an impact with  innovative digital solutions."
+    />
     <Container>
       <Headline text="About us" />
       <Spacer2 />
@@ -278,7 +258,7 @@ const Services = ({ data }) => (
         <ImageContainer>
           <IconwithBg data={IconTest} />
         </ImageContainer>
-        <TextContainer>
+        <TextContainerOpposite>
           <h3>Mission</h3>
           <p>
             We believe that our mission and clear objectives are the seeds for
@@ -291,7 +271,7 @@ const Services = ({ data }) => (
             by establishing long-term relationships with our partners and
             supporting them through their innovation journey.
           </p>
-        </TextContainer>
+        </TextContainerOpposite>
       </SectionFlex>
       <SpacerBig />
       <SectionFlexOpposite>
@@ -312,23 +292,23 @@ const Services = ({ data }) => (
             business.
           </p>
         </TextContainer>
-        <ImageContainer className="picture">
+        <ImageContainerReverse className="picture">
           <IconwithBgReverse data={Icon2} />
-        </ImageContainer>
+        </ImageContainerReverse>
       </SectionFlexOpposite>{" "}
       <SpacerBig />
       <SectionFlex>
         <ImageContainer>
           <IconwithBg data={Icon3} />
         </ImageContainer>
-        <TextContainer>
+        <TextContainerOpposite>
           <h3>Our Values</h3>
           <p>
             In addition to our customer centricity we are guided by a very clear
             culture and value-driven leadership. We believe that common values
             lead to stronger synergy between our employees and partners.
           </p>
-        </TextContainer>
+        </TextContainerOpposite>
       </SectionFlex>
       <SpacerBig />
       <CardsContainer>
@@ -338,9 +318,9 @@ const Services = ({ data }) => (
       <Headline text="Hiring Process" />
       <Spacer />
       <SectionFlexPicture>
-        <ImageContainer>
+        <ImageContainerHiring>
           <ImagewithBg data={data.pic1} />
-        </ImageContainer>
+        </ImageContainerHiring>
         <TextContainer>
           <p>
             Our mission and clear objectives are the seeds for our success. Our

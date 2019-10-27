@@ -13,6 +13,7 @@ const TextContainer = styled.div`
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 4em;
+  padding-top: 4em;
   text-align: center;
   h3 {
     font-family: raleway;
@@ -39,16 +40,16 @@ const Grid = styled.section`
   grid-gap: 1.5em;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  @media(min-width: 650px) {
+  @media (min-width: 650px) {
     grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 `
 const Item = styled.div`
   display: flex;
   padding: 1.5em 1em;
   align-items: center;
-cursor: default!important;
+  cursor: default !important;
   flex-direction: column;
   border-radius: 10px;
   transition: box-shadow 300ms ease-in-out;
@@ -75,13 +76,13 @@ const ItemLast = styled.div`
   display: flex;
   padding: 1em;
   align-items: center;
-  cursor: default!important;
+  cursor: default !important;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
   transition: box-shadow 300ms ease-in-out;
-  @media(min-width: 650px) {
-  grid-column: 1 / span 2;
+  @media (min-width: 650px) {
+    grid-column: 1 / span 2;
   }
   max-width: 500px;
   margin: 0 auto;
@@ -342,7 +343,6 @@ const Hiring = () => (
       </Grid>
       <Spacer />
       <Buttons>
-  
         <ButtonHref href="https://swissstartupjobs.com" text="Job Openings" />
       </Buttons>
       <Spacer />

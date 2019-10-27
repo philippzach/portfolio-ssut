@@ -13,36 +13,36 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr ;
-  grid-template-rows: .42fr 1fr;
-  
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.42fr 1fr;
+
   @media (max-width: 350px) {
-    grid-template-rows: .40fr 1fr;
+    grid-template-rows: 1fr 0.4fr;
   }
   @media (min-width: 351px) {
-    grid-template-rows: .50fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
   }
   @media (min-width: 400px) {
-    grid-template-rows: .60fr 1fr;
+    grid-template-rows: 1fr 0.6fr;
   }
   @media (min-width: 425px) {
-    grid-template-rows: .70fr 1fr;
+    grid-template-rows: 1fr 0.7fr;
   }
   @media (min-width: 450px) {
-    grid-template-rows: .80fr 1fr;
+    grid-template-rows: 1fr 0.8fr;
   }
   @media (min-width: 500px) {
-    grid-template-rows: .9fr 1fr;
+    grid-template-rows: 1fr 0.9fr;
   }
   @media (min-width: 550px) {
     grid-template-rows: 1fr 1fr;
-  } 
-  @media (min-width: 580px) {
-    grid-template-rows: 1.1fr 1fr;
   }
-  @media(min-width: 650px) {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  @media (min-width: 580px) {
+    grid-template-rows: 1fr 1.1fr;
+  }
+  @media (min-width: 650px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 `
 const TextContainer = styled.div`
@@ -58,14 +58,16 @@ const TextContainer = styled.div`
     font-weight: 400;
     color: rgb(65, 65, 65);
   }
-  @media(max-width: 650px) { 
+  @media (max-width: 650px) {
     max-width: 100%;
-  
   }
 `
 
 const ImageContainer = styled.div`
   padding-right: 20%;
+  @media (max-width: 650px) {
+    grid-row: 2;
+  }
 `
 
 const Spacer = styled.div`
@@ -78,7 +80,10 @@ const CardContainer = styled.div`
 
 const Tech = ({ data }) => (
   <Layout data={data.landing}>
-    <SEO title="SWISS STARTUP TECH | Technology" description="We support you with mobile and backend technologies as well as with operations and databases and offer tailored setups. Technology is complex – we support you. " />
+    <SEO
+      title="SWISS STARTUP TECH | Technology"
+      description="We support you with mobile and backend technologies as well as with operations and databases and offer tailored setups. Technology is complex – we support you. "
+    />
     <Container>
       <Headline text="Technology Stack" />
       <Spacer />
