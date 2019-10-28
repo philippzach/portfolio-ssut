@@ -120,7 +120,7 @@ const TextContainerOpposite = styled.div`
 
 const ImageContainer = styled.div`
   @media (max-width: 599px) {
-    padding: 0 10% 0 0;
+    padding: 0 20% 0 0;
     grid-row: 2;
   }
   padding-right: 20%;
