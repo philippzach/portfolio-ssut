@@ -59,10 +59,8 @@ const Footer = () => (
     <Spacer />
     <Top>
       <h4>Get in touch with us!</h4>
-      <p>
-      Be innovative and find the right product for your strategy
-      </p>
-      <Button text="Contact us" link="/contact-us" />
+      <p>Be innovative and find the right product for your strategy</p>
+      <Button text="Contact us" href="/contact-us#form" />
     </Top>
     <Middle>
       <Link to="/services">Services</Link>
