@@ -7,6 +7,7 @@ module.exports = {
     title: `Swiss Startup Tech`,
     description: `We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes.`,
     author: `@philipp.zach`,
+    siteUrl: `https://www.swissstartuptech.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -44,6 +45,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
