@@ -30,7 +30,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#d78749`,
         display: `minimal-ui`,
-        icon: `src/images/ssut-logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/ssut-favicon.png`, // This path is relative to the root of the site.
       },
     },
 
