@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `SWISS STARTUP TECH`,
     description: `We are a Swiss digital innovation team focused on accelerating product development and building innovative solutions.`,
+    author: `SSUT`,
     siteUrl: `https://www.swissstartuptech.com`,
   },
   plugins: [
