@@ -84,8 +84,8 @@ const CardContainer = styled.div`
 const IndexPage = ({ data }) => (
   <Layout data={data.landing}>
     <SEO
-      title="SWISS STARTUP TECH | Digital Innovation Team "
-      description="We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes."
+      title="SWISS STARTUP TECH | Empowering digital product development"
+      description="We are a Swiss digital innovation team focused on accelerating product development and building innovative solutions."
     />
     <Container>
       <Logos />

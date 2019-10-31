@@ -4,9 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Swiss Startup Tech`,
-    description: `We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes.`,
-    author: `@philipp.zach`,
+    title: `SWISS STARTUP TECH`,
+    description: `We are a Swiss digital innovation team focused on accelerating product development and building innovative solutions.`,
     siteUrl: `https://www.swissstartuptech.com`,
   },
   plugins: [
