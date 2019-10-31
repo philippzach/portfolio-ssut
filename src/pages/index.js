@@ -16,37 +16,36 @@ import SEO from "../components/seo"
 const SectionFlex = styled.div`
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 1fr ;
-  grid-template-rows: .85fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.85fr 1fr;
   @media (max-width: 350px) {
-    grid-template-rows: 1fr .50fr ;
+    grid-template-rows: 1fr 0.5fr;
   }
   @media (min-width: 351px) {
-    grid-template-rows:  1fr .60fr;
+    grid-template-rows: 1fr 0.6fr;
   }
   @media (min-width: 400px) {
-    grid-template-rows:  1fr .70fr;
+    grid-template-rows: 1fr 0.7fr;
   }
   @media (min-width: 425px) {
-    grid-template-rows:  1fr .80fr;
+    grid-template-rows: 1fr 0.8fr;
   }
   @media (min-width: 450px) {
-    grid-template-rows:  1fr .90fr;
+    grid-template-rows: 1fr 0.9fr;
   }
   @media (min-width: 500px) {
     grid-template-rows: 1fr 1fr;
   }
   @media (min-width: 550px) {
-    grid-template-rows:  1fr 1.1fr;
-  } 
+    grid-template-rows: 1fr 1.1fr;
+  }
   @media (min-width: 580px) {
-    grid-template-rows:  1fr 1.2fr;
+    grid-template-rows: 1fr 1.2fr;
   }
-  @media(min-width: 650px) {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  @media (min-width: 650px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
-}
 `
 const TextContainer = styled.div`
   max-width: 80%;
@@ -84,7 +83,7 @@ const CardContainer = styled.div`
 const IndexPage = ({ data }) => (
   <Layout data={data.landing}>
     <SEO
-      title="SWISS STARTUP TECH | Digital Innovation Team "
+      title="SWISS STARTUP TECH | Digital Innovation Team"
       description="We are a Swiss digital innovation team focused on accelerating product development for startups and corporates of all sizes."
     />
     <Container>
