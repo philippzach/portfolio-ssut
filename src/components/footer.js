@@ -67,6 +67,7 @@ const Footer = () => (
       <Link to="/product-domains">Product</Link>
       <Link to="/technology-stack">Technology</Link>
       <Link to="/about-us">About</Link>
+      <a href="https://www.swissstartupjobs.com">Jobs</a>
       <a href="https://medium.com/swiss-startup-tech">Blog</a>
     </Middle>
     <Bottom>
