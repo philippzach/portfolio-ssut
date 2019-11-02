@@ -30,25 +30,25 @@ const Logoi = () => (
     
     <Logos>
               <a href="http://www.amag.ch" target="_blank">
-        <img className="logostop" src={LogoA} height="100px" width="250px" alt="" />
+        <img className="logostop" src={LogoA} height="100px" width="250px" alt="Swiss Startup Tech Partners" />
         </a>
       
       
       <a href="http://www.goldbachgroup.com" target="_blank">
-        <img className="logostop" src={LogoB}  height="100" width="250" alt="" />
+        <img className="logostop" src={LogoB}  height="100" width="250" alt="Swiss Startup Tech Partners" />
         </a>
     
       
       <a href="https://www.helvetia.com" target="_blank">
-        <img className="logostop" src={LogoC}  height="100" width="250" alt="" />
+        <img className="logostop" src={LogoC}  height="100" width="250" alt="Swiss Startup Tech Partners" />
         </a>
     
       
       <a href="https://www.redbullmediahouse.com" target="_blank">
-        <img className="logostop" src={LogoD}  height="100" width="250" alt="" />
+        <img className="logostop" src={LogoD}  height="100" width="250" alt="Swiss Startup Tech Partners" />
         </a>
         <a href="https://www.wengervieli.ch" target="_blank">
-        <img className="logostop" src={LogoG}  height="100" width="250" alt="" />
+        <img className="logostop" src={LogoG}  height="100" width="250" alt="Swiss Startup Tech Partners" />
         </a>
     </Logos>
     {/* <Logos>

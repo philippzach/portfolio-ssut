@@ -95,7 +95,11 @@ const IndexPage = ({ data }) => (
           <ImagewithBg data={data.rocket} />
         </ImageContainer>
         <TextContainer>
-          <img src={Logo} alt="" />
+          <img
+            className="index-logo"
+            src={Logo}
+            alt="Swiss Startup Tech Logo"
+          />
           <h1>
             We are a Swiss digital innovation team focused on accelerating
             product development for startups and corporates of all sizes.

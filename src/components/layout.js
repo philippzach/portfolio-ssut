@@ -26,7 +26,7 @@ const Layout = ({ children, data }) => {
       <Img
         className="headerpic"
         fluid={data.childImageSharp.fluid}
-        alt="bv4 header image"
+        alt="SSUT header image"
         style={{ zIndex: "-1" }}
       ></Img>
 

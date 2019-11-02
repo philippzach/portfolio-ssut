@@ -140,14 +140,17 @@ const Spacer = styled.div`
   padding: 2em 0;
 `
 const Spacer15 = styled.div`
+  @media (min-width: 600px) {
+    padding: 2em 0;
+  }
 
-@media (min-width: 600px) { padding: 2em 0; }
-}
-  @media (min-width: 900px) { padding: 2em 0; }
-}
-@media (min-width: 1200px) { padding: 3.45em 0; }
+  @media (min-width: 900px) {
+    padding: 2em 0;
+  }
 
-  
+  @media (min-width: 1200px) {
+    padding: 3.45em 0;
+  }
 `
 const SpacerAdd = styled.div`
   padding: 2em 0;
@@ -188,7 +191,7 @@ const Services = ({ data }) => (
             <ImagewithBg data={data.pic1} />
           </ImageContainer>
           <TextContainer>
-            <h1>Product Development</h1>
+            <h2>Product Development</h2>
             <p>
               No matter at what stage, products require continuous development.
               Whether we are talking about new features, fixing bugs or
@@ -216,7 +219,7 @@ const Services = ({ data }) => (
       <Container>
         <SectionFlexOpposite opposite id="product-refinement">
           <TextContainerOpposite>
-            <h1>Product Refinement</h1>
+            <h2>Product Refinement</h2>
             <p>
               Sometimes in an early phase of product development, people tend to
               neglect the quality of the product in favor of an earlier
@@ -246,7 +249,7 @@ const Services = ({ data }) => (
           <ImagewithBg data={data.pic2} />
         </ImageContainer>
         <TextContainer>
-          <h1>Digital Transformation</h1>
+          <h2>Digital Transformation</h2>
           <p>
             Businesses today increasingly adopt innovative technology for their
             everyday procedures. They optimize processes by using mobile apps,

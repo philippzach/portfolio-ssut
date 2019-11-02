@@ -207,13 +207,13 @@ const Services = ({ data }) => (
           </div>
         </IconTextContainer>
         <IconContainer>
-          <img src={Icon1} alt="" />
+          <img src={Icon1} alt="Swiss Startup Tech Applications" />
         </IconContainer>
       </IconsRight>
       <Spacer />
       <IconsLeft>
         <IconContainer>
-          <img src={Icon2} a2lt="" />
+          <img src={Icon2} alt="Swiss Startup Tech IOT" />
         </IconContainer>
         <IconTextContainer right>
           <div>
@@ -244,13 +244,16 @@ const Services = ({ data }) => (
           </div>
         </IconTextContainer>
         <IconContainer>
-          <img src={Icon3} alt="" />
+          <img
+            src={Icon3}
+            alt="Swiss Startup Tech Virtua Reality Argumentet Reality"
+          />
         </IconContainer>
       </IconsRight>
       <Spacer />
       <IconsLeft>
         <IconContainer>
-          <img src={Icon4} a2lt="" />
+          <img src={Icon4} alt="Swiss Startup Tech Blockchain" />
         </IconContainer>
         <IconTextContainer right>
           <div>
@@ -280,7 +283,10 @@ const Services = ({ data }) => (
           </div>
         </IconTextContainer>
         <IconContainer>
-          <img src={Icon5} alt="" />
+          <img
+            src={Icon5}
+            alt="Swiss Startup Tech Machine Learing Applications"
+          />
         </IconContainer>
       </IconsRight>
       <Spacer />

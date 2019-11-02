@@ -31,6 +31,7 @@ const ImagewithBg = props => (
       <Img
         style={{ maxHeight: "580px" }}
         fluid={props.data.childImageSharp.fluid}
+        alt="Swiss Startup Tech"
       />
     </Image>
   </ImageContainer>

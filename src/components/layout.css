@@ -678,3 +678,8 @@ pre tt:after {
     transform: translate(19px, 0);
   }
 }
+@media only screen and (max-width: 580px) {
+  .index-logo {
+    display: none;
+  }
+}
