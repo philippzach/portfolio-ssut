@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-const Headline = styled.h1`
+const Headline = styled.h2`
   font-family: raleway;
   color: #535353;
 `
