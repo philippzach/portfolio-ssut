@@ -259,7 +259,7 @@ const Services = ({ data }) => (
           <IconwithBg data={IconTest} />
         </ImageContainer>
         <TextContainerOpposite>
-          <h3>Mission</h3>
+          <h1>Mission</h1>
           <p>
             We believe that our mission and clear objectives are the seeds for
             our success. Without any compromise, we take full responsibility for
@@ -276,7 +276,7 @@ const Services = ({ data }) => (
       <SpacerBig />
       <SectionFlexOpposite>
         <TextContainer left className="text">
-          <h3>Team</h3>
+          <h1>Team</h1>
           <p>
             Our team is entirely made up of product builders who strive to serve
             companies that see the world differently and want to make an impact
@@ -302,7 +302,7 @@ const Services = ({ data }) => (
           <IconwithBg data={Icon3} />
         </ImageContainer>
         <TextContainerOpposite>
-          <h3>Our Values</h3>
+          <h1>Our Values</h1>
           <p>
             In addition to our customer centricity we are guided by a very clear
             culture and value-driven leadership. We believe that common values
@@ -315,25 +315,7 @@ const Services = ({ data }) => (
         <Cards />
       </CardsContainer>
       <Spacer2 />
-      <Headline text="Hiring Process" />
-      <Spacer />
-      <SectionFlexPicture>
-        <ImageContainerHiring>
-          <ImagewithBg data={data.pic1} />
-        </ImageContainerHiring>
-        <TextContainer>
-          <p>
-            Our mission and clear objectives are the seeds for our success. Our
-            projects are well defined and always include a clear mission
-            statement followed by clear objectives that our team aims to
-            achieve. We admire our employees’ creativity and accountability and
-            we empower them to take responsibility for different areas of our
-            business. Without any compromise, we take full responsibility for
-            every promise we give or commitment we take.
-          </p>
-        </TextContainer>
-      </SectionFlexPicture>
-      <Spacer1 />
+      <Headline text="Become a part of our journey" />
       <Hiring />
     </Container>
   </Layout>

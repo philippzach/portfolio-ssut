@@ -97,8 +97,8 @@ const IndexPage = ({ data }) => (
         <TextContainer>
           <img src={Logo} alt="" />
           <h1>
-            We are a Swiss digital innovation team focused on accelerating
-            product development for startups and corporates of all sizes.
+            We are a swiss digital innovation team focused on accelerating
+            product development and building innovative solutions.
           </h1>
           <p>
             Together with our clients we challenge the status quo and focus on

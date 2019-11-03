@@ -182,29 +182,33 @@ const Services = ({ data }) => (
     <Container>
       <Headline text="Services" />
       <Spacer />
-      <a id="productdevelopment">
+      <a id="product-innovation">
         <SectionFlex>
           <ImageContainer>
             <ImagewithBg data={data.pic1} />
           </ImageContainer>
           <TextContainer>
-            <h1>Product Development</h1>
+            <h1>
+              Product
+              <br />
+              Innovation
+            </h1>
             <p>
-              No matter at what stage, products require continuous development.
-              Whether we are talking about new features, fixing bugs or
-              optimizing the architecture, we use agile methodologies to
-              develop, review and implement user-friendly solutions. to work in
-              sprints and do planning, demo and retrospective sessions. We ship
-              frequently and never stop listening to you and to your customers’
-              feedback.
+              We empower teams to develop their ideas on a highly efficient
+              level. Our experienced team will prepare all necessary designs and
+              prototypes to validate the idea first by testing it with the
+              potential customers. Only after a successful validation we are
+              preparing a personally tailored product development strategy based
+              on frequent iterations, clear expectations and well-defined
+              milestones. We ship frequently and never stop listening to you and
+              to your customers’ feedback.
             </p>
             <p>
-              Whatever plans you have for your product, we are here to bring
-              them to life. We use modern software development methodologies to
-              craft compliant state-of-the-art applications with intuitive user
+              We use modern software development methodologies to craft
+              compliant state-of-the-art applications with intuitive user
               interfaces. Thanks to our quality assurance standards we are able
-              to achieve the best possible solutions and deliver scalable,
-              stable and future-proof solutions for our customers.
+              to achieve the best possible solutions and deliver scalable and
+              future-proof solutions for our customers.
             </p>
           </TextContainer>
         </SectionFlex>
@@ -214,22 +218,27 @@ const Services = ({ data }) => (
 
     <BackgroundSvg>
       <Container>
-        <SectionFlexOpposite opposite id="product-refinement">
+        <SectionFlexOpposite opposite id="product-development">
           <TextContainerOpposite>
-            <h1>Product Refinement</h1>
+            <h1>
+              Product
+              <br />
+              Development
+            </h1>
             <p>
-              Sometimes in an early phase of product development, people tend to
-              neglect the quality of the product in favor of an earlier
-              go-to-market. We support teams that are refactoring their products
-              by introducing improved architecture, cleaner codebase and faster
-              applications.
+              No matter at what stage, every product requires continuous
+              development. Sometimes in an early phase of product development,
+              people tend to neglect the quality of the product in favor of an
+              earlier go-to-market. We support teams that are refactoring their
+              products by introducing improved architecture, cleaner codebase
+              and faster applications.
             </p>
             <p>
-              We are happy to bring your solution to the next level and prepare
-              it for global scale. Our team is dedicated to improving your
-              infrastructure by reviewing and solving bottlenecks both in
-              architecture and data modelling so you can offer the best-possible
-              solution to your customers.
+              We are happy to become an extension of your team and help you
+              bring your solution to the next level for global scale. Our team
+              is dedicated to improving your infrastructure by reviewing and
+              solving bottlenecks both in architecture and data modelling so you
+              can offer the best-possible solution to your customers.
             </p>
           </TextContainerOpposite>
           <ImageContainerOpposite>
@@ -246,7 +255,11 @@ const Services = ({ data }) => (
           <ImagewithBg data={data.pic2} />
         </ImageContainer>
         <TextContainer>
-          <h1>Digital Transformation</h1>
+          <h1>
+            Company
+            <br />
+            Digitalisation
+          </h1>
           <p>
             Businesses today increasingly adopt innovative technology for their
             everyday procedures. They optimize processes by using mobile apps,

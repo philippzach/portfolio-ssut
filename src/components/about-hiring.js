@@ -119,7 +119,6 @@ const Hiring = () => (
         give their all on the way to becoming future rock stars of the digital
         world.
       </p>
-      <span>Our probation period is 3 months</span>
     </TextContainer>
     <GridContainer>
       <Grid>
