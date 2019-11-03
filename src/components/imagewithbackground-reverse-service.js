@@ -30,8 +30,9 @@ const ImagewithBg = props => (
     <Image>
       <Img
         style={{ maxHeight: "580px" }}
-        imgStyle={{zIndex: "10"}}
+        imgStyle={{ zIndex: "10" }}
         fluid={props.data.childImageSharp.fluid}
+        alt="Swiss Startup Tech"
       />
       {/* <img src={BackgroundSvg} /> */}
     </Image>

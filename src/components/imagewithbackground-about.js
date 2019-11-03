@@ -25,7 +25,7 @@ const Image = styled.div`
   }
   @media (max-width: 599px) {
     ::after {
-        left: 6%; 
+      left: 6%;
     }
   }
 `
@@ -36,6 +36,7 @@ const ImagewithBg = props => (
       <Img
         style={{ maxHeight: "580px" }}
         fluid={props.data.childImageSharp.fluid}
+        alt="Swiss Startup Tech"
       />
     </Image>
   </ImageContainer>

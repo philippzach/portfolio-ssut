@@ -10,9 +10,9 @@ const Grid = styled.section`
   grid-template-columns: repeat(1, 365px);
   grid-template-rows: repeat(4, 365px);
   grid-gap: 1em;
-  @media(min-width: 650px) {
+  @media (min-width: 650px) {
     grid-template-columns: repeat(2, 365px);
-  grid-template-rows: repeat(2, 365px);
+    grid-template-rows: repeat(2, 365px);
   }
 `
 
@@ -52,7 +52,7 @@ const CardTech = () => (
   <Grid>
     <Card>
       <ImageContainer>
-        <img src={Icon1} alt="" />
+        <img src={Icon1} alt="Native & Hybrid Mobile Development" />
       </ImageContainer>
       <Headline>Mobile</Headline>
       <Paragraph>
@@ -65,7 +65,7 @@ const CardTech = () => (
     </Card>
     <Card>
       <ImageContainer>
-        <img src={Icon2} alt="" />
+        <img src={Icon2} alt="Backend Development" />
       </ImageContainer>
       <Headline>Backend</Headline>
       <Paragraph>
@@ -79,7 +79,7 @@ const CardTech = () => (
     </Card>
     <Card>
       <ImageContainer>
-        <img src={Icon3} alt="" />
+        <img src={Icon3} alt="Hosting, CI/CD & Cloud" />
       </ImageContainer>
       <Headline>Operations</Headline>
       <Paragraph>
@@ -92,7 +92,7 @@ const CardTech = () => (
     </Card>
     <Card>
       <ImageContainer>
-        <img src={Icon4} alt="" />
+        <img src={Icon4} alt="Relational & NoSQL Database Management" />
       </ImageContainer>
       <Headline>Database</Headline>
       <Paragraph>

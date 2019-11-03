@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,6 +32,7 @@ module.exports = {
         theme_color: `#d78749`,
         display: `minimal-ui`,
         icon: `static/ssut-favicon.png`, // This path is relative to the root of the site.
+        include_favicon: false,
       },
     },
 

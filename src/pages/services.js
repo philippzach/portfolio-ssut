@@ -140,14 +140,17 @@ const Spacer = styled.div`
   padding: 2em 0;
 `
 const Spacer15 = styled.div`
+  @media (min-width: 600px) {
+    padding: 2em 0;
+  }
 
-@media (min-width: 600px) { padding: 2em 0; }
-}
-  @media (min-width: 900px) { padding: 2em 0; }
-}
-@media (min-width: 1200px) { padding: 3.45em 0; }
+  @media (min-width: 900px) {
+    padding: 2em 0;
+  }
 
-  
+  @media (min-width: 1200px) {
+    padding: 3.45em 0;
+  }
 `
 const SpacerAdd = styled.div`
   padding: 2em 0;

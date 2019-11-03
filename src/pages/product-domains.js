@@ -150,7 +150,7 @@ const IconTextContainer = styled.div`
   div {
     max-width: 350px;
   }
-  h3 {
+  h2 {
     color: #535353;
     font-family: raleway;
     font-weight: bold;
@@ -165,11 +165,11 @@ const IconTextContainer = styled.div`
 const Services = ({ data }) => (
   <Layout data={data.landing}>
     <SEO
-      title="SWISS STARTUP TECH | Product"
+      title="SWISS STARTUP TECH | Product domains"
       description="We offer innovative digital strategies with the following products: web & mobile applications, IoT, different reality, blockchain, AI and machine learning. "
     />
     <Container>
-      <Headline text="Product Domains" />
+      <Headline text="Product domains" />
       <Spacer />
       <SectionFlex>
         <ImageContainer>
@@ -195,7 +195,7 @@ const Services = ({ data }) => (
       <IconsRight>
         <IconTextContainer>
           <div>
-            <h3>Web & Mobile Applications</h3>
+            <h2>Web & Mobile Applications</h2>
             <p>
               Our team has a lot of experience building customer-tailored mobile
               and web applications by using cutting-edge technology. We focus on
@@ -207,17 +207,17 @@ const Services = ({ data }) => (
           </div>
         </IconTextContainer>
         <IconContainer>
-          <img src={Icon1} alt="" />
+          <img src={Icon1} alt="Web & Mobile Applications" />
         </IconContainer>
       </IconsRight>
       <Spacer />
       <IconsLeft>
         <IconContainer>
-          <img src={Icon2} a2lt="" />
+          <img src={Icon2} alt="Internet of Things (IoT)" />
         </IconContainer>
         <IconTextContainer right>
           <div>
-            <h3>IoT</h3>
+            <h2>Internet of Things (IoT)</h2>
             <p>
               You are in search of an industry 4.0 or smart connected solution
               that is up to the newest standards and covers a wide range of
@@ -233,7 +233,7 @@ const Services = ({ data }) => (
       <IconsRight>
         <IconTextContainer>
           <div>
-            <h3>Different Reality</h3>
+            <h2>Different Reality</h2>
             <p>
               Whether you are in need of a virtual-reality application or you
               prefer augmented reality, or you require a mix of both, we are
@@ -244,17 +244,17 @@ const Services = ({ data }) => (
           </div>
         </IconTextContainer>
         <IconContainer>
-          <img src={Icon3} alt="" />
+          <img src={Icon3} alt="Virtual Reality & Augmented Reality" />
         </IconContainer>
       </IconsRight>
       <Spacer />
       <IconsLeft>
         <IconContainer>
-          <img src={Icon4} a2lt="" />
+          <img src={Icon4} alt="Blockchain & Smart Contracts" />
         </IconContainer>
         <IconTextContainer right>
           <div>
-            <h3>Blockchain</h3>
+            <h2>Blockchain</h2>
             <p>
               One system from start to finish or different applications for
               every step of the process – we create dedicated solutions tailored
@@ -268,7 +268,7 @@ const Services = ({ data }) => (
       <IconsRight>
         <IconTextContainer>
           <div>
-            <h3>Artificial Intelligence & Machine Learning</h3>
+            <h2>Artificial Intelligence & Machine Learning</h2>
             <p>
               You may not be aware of it, but artificial intelligence and
               machine learning are an integral part of our daily lives. We have
@@ -280,7 +280,7 @@ const Services = ({ data }) => (
           </div>
         </IconTextContainer>
         <IconContainer>
-          <img src={Icon5} alt="" />
+          <img src={Icon5} alt="Artificial Intelligence & Machine Learning" />
         </IconContainer>
       </IconsRight>
       <Spacer />

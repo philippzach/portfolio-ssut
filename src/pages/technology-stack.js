@@ -81,7 +81,7 @@ const CardContainer = styled.div`
 const Tech = ({ data }) => (
   <Layout data={data.landing}>
     <SEO
-      title="SWISS STARTUP TECH | Technology"
+      title="SWISS STARTUP TECH | Technology Stack"
       description="We support you with mobile and backend technologies as well as with operations and databases and offer tailored setups. Technology is complex – we support you. "
     />
     <Container>
